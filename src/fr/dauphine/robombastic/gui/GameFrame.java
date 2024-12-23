@@ -77,9 +77,7 @@ public class GameFrame extends JFrame {
 		bPauseJeu = new JButton("Pause");
 		
 		bStopJeu = new JButton("Stop");
-		
-		updateEnableButtons();
-		
+				
 		pInfo = new JPanel();
 		lInfo = new JLabel();
 		
@@ -185,18 +183,23 @@ public class GameFrame extends JFrame {
 		
 		this.lInfo.setText(this.game.getGameInfo());
 		
-		updateEnableButtons();
+		bDemarrerJeu.setEnabled(false);
 		
 		this.drawingZone.refresh();
 	}
 	
 	private void bPauseJeuActionPerformed(ActionEvent e){
-
+		if (!this.game.isPaused()){
+			bStopJeu.setEnabled(false);
+		}else{
+			bStopJeu.setEnabled(true);
+		}
 		this.game.pause();
 		
 		this.lInfo.setText(this.game.getGameInfo());
 		
-		//updateEnableButtons();
+		bDemarrerJeu.setEnabled(false);
+		this.drawingZone.refresh();
 	}
 	
 	private void bStopJeuActionPerformed(ActionEvent e){
@@ -204,15 +207,11 @@ public class GameFrame extends JFrame {
 		
 		this.lInfo.setText(this.game.getGameInfo());
 		
-		updateEnableButtons();
+		bDemarrerJeu.setEnabled(false);
+		bPauseJeu.setEnabled(false);
+		this.drawingZone.refresh();
 	}
-	
-	private void updateEnableButtons(){
-		bDemarrerJeu.setEnabled(!this.game.isStarted());
-		bPauseJeu.setEnabled(this.game.isStarted());
-		bStopJeu.setEnabled(!this.game.isFinished() && !this.game.isInit());
-	}
-	
+		
 	public void updateDrawing(){
 		this.drawingZone.refresh();
 	}

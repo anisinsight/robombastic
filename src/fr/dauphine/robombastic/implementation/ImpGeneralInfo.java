@@ -1,9 +1,16 @@
 package fr.dauphine.robombastic.implementation;
 
+import java.io.Serializable;
+
 import fr.dauphine.robombastic.GeneralInfo;
 
-public class ImpGeneralInfo implements GeneralInfo {
+public class ImpGeneralInfo implements GeneralInfo,Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7170393949424769862L;
+
 	/**
 	 * La heuteur de l'arene en cellule
 	 */

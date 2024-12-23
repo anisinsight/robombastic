@@ -1,8 +1,15 @@
 package fr.dauphine.robombastic.implementation;
 
+import java.io.Serializable;
+
 import fr.dauphine.robombastic.Position;
 
-public class ImpPosition implements Position{
+public class ImpPosition implements Position, Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8763392488415619934L;
+
 	int x;
 	int y;
 	

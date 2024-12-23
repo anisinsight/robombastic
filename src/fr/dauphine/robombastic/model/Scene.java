@@ -1,5 +1,6 @@
 package fr.dauphine.robombastic.model;
 
+import java.io.Serializable;
 import java.util.*;
 
 import fr.dauphine.robombastic.ArenaItem;
@@ -21,7 +22,12 @@ import fr.dauphine.robombastic.implementation.Robot;
  * 
  *         La representation de la arene sous form d'une matrice ...
  */
-public class Scene {
+public class Scene implements Serializable{
+	/**
+	 * Serial version UID
+	 */
+	private static final long serialVersionUID = 2467957197975851280L;
+
 	private ACell[][] arena = null;
 
 	private Map<Bot, LinkedList<Integer>> mapGuiBomb = new HashMap<>();

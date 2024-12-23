@@ -1,12 +1,19 @@
 package fr.dauphine.robombastic.gui.drawing;
 
 import java.awt.Color;
+import java.io.Serializable;
+
 import javax.swing.ImageIcon;
 
 import fr.dauphine.robombastic.util.ImageUtils;
 
-public abstract class AElementGraphique implements IElementGraphique {
+public abstract class AElementGraphique implements IElementGraphique, Serializable {
 	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5769224356448812753L;
 	
 	private Color lineColor;
 	private Color backgroundColor;

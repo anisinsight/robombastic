@@ -1,5 +1,6 @@
 package fr.dauphine.robombastic.implementation;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,8 +24,13 @@ import fr.dauphine.robombastic.model.Game;
  * @author Anis TLILANE & Sid Ahmed IMLOUL
  * 
  */
-public class ImpCurrentBotInfo implements CurrentBotInfo {
+public class ImpCurrentBotInfo implements CurrentBotInfo, Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4104172878381885644L;
+	
 	private Game game;
 	private String armyName = "";
 	private Bot bot = null;

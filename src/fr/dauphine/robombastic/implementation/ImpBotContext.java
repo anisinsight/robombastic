@@ -1,12 +1,19 @@
 package fr.dauphine.robombastic.implementation;
 
+import java.io.Serializable;
 import java.util.*;
 
 import fr.dauphine.robombastic.*;
 import fr.dauphine.robombastic.graphicalobjects.Bomb;
 import fr.dauphine.robombastic.model.Game;
 
-public class ImpBotContext implements BotContext {
+public class ImpBotContext implements BotContext, Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7296732007448178852L;
+
 
 	public static boolean paused = false;
 
